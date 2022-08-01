@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const Profile = (props) => {
 
@@ -23,3 +24,12 @@ const Profile = (props) => {
 };
 
 export default Profile;
+
+Profile.PropTypes ={
+    
+        anyProp: PropTypes.any,
+        booleanProp: PropTypes.bool,
+        numberProp: PropTypes.number,
+        stringProp: PropTypes.string,
+        functionProp: PropTypes.func
+}
