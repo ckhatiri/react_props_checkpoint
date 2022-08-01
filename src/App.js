@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./Profile/Profile";
+import ProfilePhoto from "./Profile/images/profilePhoto.jpeg";
 
 function App() {
+  const profile = {
+    'fullName':"Khatiri Chahrazad",
+    'bio':"I’m a web developer.",
+    'profession':"full-stack JS developer"
+  }
+  const handleName = (e) => {
+    e.preventDefault();
+    alert(`This is ${profile.fullName} profile`)
+}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+       profile = {profile}
+       handleName ={handleName}
+      >
+      <img style={{ width: "400px"}} src={ProfilePhoto} alt="profile"/>
+      </Profile>
     </div>
   );
 }
